@@ -12,15 +12,15 @@ class SSRStyle(Style):
 
     styles = {
         Comment:		"italic #228B22",		# forest green
-        Operator:               '#808080',			# gray
+        Operator:               '#696969',			# dim gray
         Keyword:                "#0000AA",
         Keyword.Constant:	"#0000CD",			# tactics (medium blue)
         Keyword.Type:		"#228B22",			# sorts (forest green)
-        Keyword.Namespace:	"bold #9400D3",	        	# vernacular (dark violet)
+        Keyword.Namespace:	"#8B008B",	        	# vernacular (dark magenta)
         Keyword.Pseudo:	        "#EE0000",	        	# terminators (red)
-	Keyword.Reserved:	"#BA55D3",			# tacticals (medium orchid)
-        Number:			"#A0522D",			# sienna
-        Name.Literal:		"#006400"			# dark green
+	Keyword.Reserved:	"#9400D3",			# tacticals (dark violet)
+        Number:			"#191970",			# midnight blue
+        Name.Literal:		"#000000"			# black
     }
 
 class SSRLexer(RegexLexer):
