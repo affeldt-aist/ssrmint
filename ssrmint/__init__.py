@@ -8,19 +8,29 @@ class SSRStyle(Style):
     adjust emacs stylesheet to look more like proof general with default emacs settings
     """
 
-    background_color = "#f8f8f8"
     default_style = "emacs"
 
     styles = {
-        Comment:		"italic #AA0000",
-        Keyword.Constant:	"nobold #0000AA",		# tactics
-        Keyword.Type:		"nobold #228B22",		# forest green
-        Keyword.Namespace:	"nobold #9400D3"	        # definitions, etc. -> dark violet
+        Comment:		"italic #228B22",		# forest green
+        Operator:               '#808080',			# gray
+        Keyword:                "#0000AA",
+        Keyword.Constant:	"#0000CD",			# tactics (medium blue)
+        Keyword.Type:		"#228B22",			# sorts (forest green)
+        Keyword.Namespace:	"bold #9400D3",	        	# vernacular (dark violet)
+        Keyword.Pseudo:	        "#EE0000",	        	# terminators (red)
+	Keyword.Reserved:	"#BA55D3",			# tacticals (medium orchid)
+        Number:			"#A0522D",			# sienna
+        Name.Literal:		"#006400"			# dark green
     }
 
 class SSRLexer(RegexLexer):
     """
-    copied from /usr/lib/python2.7/dist-packages/pygments/lexers/theorem.py
+    copy-pasted from /usr/lib/python2.7/dist-packages/pygments/lexers/theorem.py [2018-04-06]
+
+    which has the following copyright
+
+    :copyright: Copyright 2006-2017 by the Pygments team
+    :license: BSD
     """
 
     name = 'Coq'
@@ -103,19 +113,20 @@ class SSRLexer(RegexLexer):
             (r'\s+', Text),
             (r'false|true|\(\)|\[\]', Name.Builtin.Pseudo),
             (r'\(\*', Comment, 'comment'),
-            (words(keywords1, prefix=r'\b', suffix=r'\b'), Keyword.Namespace), # definitions, etc.
-#(rei)            (words(keywords2, prefix=r'\b', suffix=r'\b'), Keyword),
-            (words(keywords2, prefix=r'\b', suffix=r'\b'), Keyword.Type), # forall, etc.
-            (words(keywords3, prefix=r'\b', suffix=r'\b'), Keyword.Type),
-#(rei)            (words(keywords4, prefix=r'\b', suffix=r'\b'), Keyword),
-            (words(keywords4, prefix=r'\b', suffix=r'\b'), Keyword.Constant), # tactics
-            (words(keywords5, prefix=r'\b', suffix=r'\b'), Keyword.Pseudo),
+            (words(keywords1, prefix=r'\b', suffix=r'\b'), Keyword.Namespace),	# definitions, etc.
+            # [NB(rei): was "(words(keywords2, prefix=r'\b', suffix=r'\b'), Keyword),"]
+            (words(keywords2, prefix=r'\b', suffix=r'\b'), Keyword.Type),	# forall, etc.
+            (words(keywords3, prefix=r'\b', suffix=r'\b'), Keyword.Type),	# types and sorts
+            # [NB(rei): was "(words(keywords4, prefix=r'\b', suffix=r'\b'), Keyword),"]
+            (words(keywords4, prefix=r'\b', suffix=r'\b'), Keyword.Constant), 	# tactics
+            (words(keywords5, prefix=r'\b', suffix=r'\b'), Keyword.Pseudo), 	# terminators
             (words(keywords6, prefix=r'\b', suffix=r'\b'), Keyword.Reserved),
             # (r'\b([A-Z][\w\']*)(\.)', Name.Namespace, 'dotted'),
             (r'\b([A-Z][\w\']*)', Name),
             (r'(%s)' % '|'.join(keyopts[::-1]), Operator),
             (r'(%s|%s)?%s' % (infix_syms, prefix_syms, operators), Operator),
-            (r'\b(%s)\b' % '|'.join(primitives), Keyword.Type),
+            # [NB(rei): was "(r'\b(%s)\b' % '|'.join(primitives), Keyword.Type),"]
+            (r'\b(%s)\b' % '|'.join(primitives), Name.Literal),			# unit, nat, etc.
 
             (r"[^\W\d][\w']*", Name),
 
