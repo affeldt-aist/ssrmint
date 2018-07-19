@@ -5,10 +5,14 @@ ssrmint
 
 see description in [setup.py](setup.py)
 
+## requirements
+
+python-setuptools, python-pygments (Debian packages)
+(has been tested on a Debian 9.4 machine with Python 2.7.13)
+
 ## install
 
 * type `make install`
-* has been test on a Debian 9.4 machine with Python 2.7.13 and the python-pygments Debian package installed
 * check the style and the lexer have been installed: `pygmentize -L lexers`, `pygmentize -L styles`
 
 ## usage

@@ -31,6 +31,8 @@ class SSRLexer(RegexLexer):
 
     :copyright: Copyright 2006-2017 by the Pygments team
     :license: BSD
+
+    changes are marked as [NB(rei): ...]
     """
 
     name = 'Coq'
@@ -52,7 +54,8 @@ class SSRLexer(RegexLexer):
         'Qed', 'Defined', 'Hint', 'Resolve', 'Rewrite', 'View', 'Search',
         'Show', 'Print', 'Printing', 'All', 'Graph', 'Projections', 'inside',
         'outside', 'Check', 'Global', 'Instance', 'Class', 'Existing',
-        'Universe', 'Polymorphic', 'Monomorphic', 'Context'
+        'Universe', 'Polymorphic', 'Monomorphic', 'Context',
+        'Program' #[NB(rei): added]
     )
     keywords2 = (
         # Gallina
@@ -77,6 +80,7 @@ class SSRLexer(RegexLexer):
         'intuition', 'eauto', 'eapply', 'econstructor', 'etransitivity',
         'constructor', 'erewrite', 'red', 'cbv', 'lazy', 'vm_compute',
         'native_compute', 'subst',
+        'fourier', 'nstaz' #[NB(rei): added]
     )
     keywords5 = (
         # Terminators
