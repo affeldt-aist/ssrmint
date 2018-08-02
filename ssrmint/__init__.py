@@ -55,7 +55,7 @@ class SSRLexer(RegexLexer):
         'Show', 'Print', 'Printing', 'All', 'Graph', 'Projections', 'inside',
         'outside', 'Check', 'Global', 'Instance', 'Class', 'Existing',
         'Universe', 'Polymorphic', 'Monomorphic', 'Context',
-        'Program' #[NB(rei): added]
+        'Program', 'Eval' #[NB(rei): added]
     )
     keywords2 = (
         # Gallina
