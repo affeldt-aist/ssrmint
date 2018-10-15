@@ -45,7 +45,7 @@ class SSRLexer(RegexLexer):
         'Section', 'Module', 'End', 'Require', 'Import', 'Export', 'Variable',
         'Variables', 'Parameter', 'Parameters', 'Axiom', 'Hypothesis',
         'Hypotheses', 'Notation', 'Local', 'Tactic', 'Reserved', 'Scope',
-        'Open', 'Close', 'Bind', 'Delimit', 'Definition', 'Let', 'Ltac',
+        'Open', 'Close', 'Delimit', 'Definition', 'Let', 'Ltac',
         'Fixpoint', 'CoFixpoint', 'Morphism', 'Relation', 'Implicit',
         'Arguments', 'Set', 'Unset', 'Contextual', 'Strict', 'Prenex',
         'Implicits', 'Inductive', 'CoInductive', 'Record', 'Structure',
@@ -53,9 +53,10 @@ class SSRLexer(RegexLexer):
         'Proposition', 'Fact', 'Remark', 'Example', 'Proof', 'Goal', 'Save',
         'Qed', 'Defined', 'Hint', 'Resolve', 'Rewrite', 'View', 'Search',
         'Show', 'Print', 'Printing', 'All', 'Graph', 'Projections', 'inside',
-        'outside', 'Check', 'Global', 'Instance', 'Class', 'Existing',
+        'outside', 'Check', 'Global', 'Instance', 'Existing',
         'Universe', 'Polymorphic', 'Monomorphic', 'Context',
         'Program', 'Eval' #[NB(rei): added]
+        #[NB(rei): removed 'Bind', 'Class']
     )
     keywords2 = (
         # Gallina
@@ -74,13 +75,14 @@ class SSRLexer(RegexLexer):
         'induction', 'using', 'refine', 'inversion', 'injection', 'rewrite',
         'congr', 'unlock', 'compute', 'ring', 'field', 'replace', 'fold',
         'unfold', 'change', 'cutrewrite', 'simpl', 'have', 'suff', 'wlog',
-        'suffices', 'without', 'loss', 'nat_norm', 'assert', 'cut', 'trivial',
+        'suffices', 'without', 'loss', 'nat_norm', 'cut', 'trivial',
         'revert', 'bool_congr', 'nat_congr', 'symmetry', 'transitivity', 'auto',
         'split', 'left', 'right', 'autorewrite', 'tauto', 'setoid_rewrite',
         'intuition', 'eauto', 'eapply', 'econstructor', 'etransitivity',
         'constructor', 'erewrite', 'red', 'cbv', 'lazy', 'vm_compute',
         'native_compute', 'subst',
-        'fourier', 'nstaz' #[NB(rei): added]
+        'fourier', 'nstaz', 'lra' #[NB(rei): added]
+        #[NB(rei): removed 'assert']
     )
     keywords5 = (
         # Terminators
