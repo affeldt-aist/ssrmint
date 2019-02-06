@@ -76,13 +76,13 @@ class SSRLexer(RegexLexer):
         'congr', 'unlock', 'compute', 'ring', 'field', 'replace', 'fold',
         'unfold', 'change', 'cutrewrite', 'simpl', 'have', 'suff', 'wlog',
         'suffices', 'without', 'loss', 'nat_norm', 'cut', 'trivial',
-        'revert', 'bool_congr', 'nat_congr', 'symmetry', 'transitivity', 'auto',
+        'revert', 'bool_congr', 'nat_congr', 'transitivity', 'auto',
         'split', 'left', 'right', 'autorewrite', 'tauto', 'setoid_rewrite',
         'intuition', 'eauto', 'eapply', 'econstructor', 'etransitivity',
         'constructor', 'erewrite', 'red', 'cbv', 'lazy', 'vm_compute',
         'native_compute', 'subst',
         'fourier', 'nstaz', 'lra' #[NB(rei): added]
-        #[NB(rei): removed 'assert']
+        #[NB(rei): removed 'assert', 'symmetry']
     )
     keywords5 = (
         # Terminators
