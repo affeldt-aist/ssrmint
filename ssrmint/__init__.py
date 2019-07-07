@@ -25,7 +25,7 @@ class SSRStyle(Style):
 
 class SSRLexer(RegexLexer):
     """
-    copy-pasted from /usr/lib/python2.7/dist-packages/pygments/lexers/theorem.py [2018-04-06]
+    originally copy-pasted from /usr/lib/python2.7/dist-packages/pygments/lexers/theorem.py [2018-04-06]
 
     which has the following copyright
 
