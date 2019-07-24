@@ -55,7 +55,7 @@ class SSRLexer(RegexLexer):
         'Show', 'Print', 'Printing', 'All', 'Graph', 'Projections', 'inside',
         'outside', 'Check', 'Global', 'Instance', 'Existing',
         'Universe', 'Polymorphic', 'Monomorphic', 'Context',
-        'Program', 'Eval' #[NB(rei): added]
+        'Program', 'Eval', 'Obligation', 'Obligations', 'Solve' #[NB(rei): added]
         #[NB(rei): removed 'Bind', 'Class']
     )
     keywords2 = (
@@ -81,7 +81,7 @@ class SSRLexer(RegexLexer):
         'intuition', 'eauto', 'eapply', 'econstructor', 'etransitivity',
         'constructor', 'erewrite', 'red', 'cbv', 'lazy', 'vm_compute',
         'native_compute', 'subst',
-        'fourier', 'nstaz', 'lra' #[NB(rei): added]
+        'fourier', 'nstaz', 'lra', 'program_simpl' #[NB(rei): added]
         #[NB(rei): removed 'assert', 'symmetry']
     )
     keywords5 = (
@@ -92,7 +92,7 @@ class SSRLexer(RegexLexer):
     )
     keywords6 = (
         # Control
-        'do', 'last', 'first', 'try', 'idtac', 'repeat',
+        'do', 'last', 'first', 'try', 'idtac', 'repeat'
     )
     # 'as', 'assert', 'begin', 'class', 'constraint', 'do', 'done',
     # 'downto', 'else', 'end', 'exception', 'external', 'false',
