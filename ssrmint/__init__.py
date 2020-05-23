@@ -81,7 +81,7 @@ class SSRLexer(RegexLexer):
         'intuition', 'eauto', 'eapply', 'econstructor', 'etransitivity',
         'constructor', 'erewrite', 'red', 'cbv', 'lazy', 'vm_compute',
         'native_compute', 'subst',
-        'fourier', 'nstaz', 'lra', 'program_simpl', 'evar', 'under' #[NB(rei): added]
+        'fourier', 'nstaz', 'lra', 'program_simpl', 'evar', 'under', 'eexists' #[NB(rei): added]
         #[NB(rei): removed 'assert', 'symmetry']
     )
     keywords5 = (
