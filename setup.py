@@ -8,7 +8,7 @@ setup(
     author       = "Reynald Affeldt",
     install_requires = ['pygments'],
     packages = ['ssrmint'],
-    license = ['BSD'],
+    license = 'BSD',
     entry_points = {
         'pygments.styles': ['ssr = ssrmint:SSRStyle'],
         'pygments.lexers': ['CoqLexer = ssrmint:SSRLexer'],
