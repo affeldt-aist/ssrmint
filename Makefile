@@ -1,11 +1,12 @@
 PYTHON = python3
 
 install:
-	sudo $(PYTHON) setup.py install
+#	sudo $(PYTHON) setup.py install
+	sudo pip install .
 
-uninstall: clean
-	sudo rm -rf /usr/local/bin/pygmentize
-	sudo rm -rf /usr/local/lib/python2.7/dist-packages/ssrmint-0.1-py2.7.egg
+#uninstall: clean
+#	sudo rm -rf /usr/local/bin/pygmentize
+#	sudo rm -rf /usr/local/lib/python2.7/dist-packages/ssrmint-0.1-py2.7.egg
 
 clean:
 	sudo rm -rf ./build
