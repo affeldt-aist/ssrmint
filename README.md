@@ -7,11 +7,17 @@ see description in [setup.py](setup.py)
 
 ## requirements
 
+### Python 3.10.4
+
+python3-setuptools, python3-pygments (Debian packages)
+
+### Python 2.7.13 (tested with Debian 9.4)
+
 python-setuptools, python-pygments (Debian packages)
-(has been tested on a Debian 9.4 machine with Python 2.7.13)
 
 ## install
 
+* set the "right" python in `Makefile` 
 * type `make install`
 * check the style and the lexer have been installed: `pygmentize -L lexers`, `pygmentize -L styles`
 

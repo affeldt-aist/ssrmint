@@ -1,5 +1,7 @@
+PYTHON = python3
+
 install:
-	sudo python setup.py install
+	sudo $(PYTHON) setup.py install
 
 uninstall: clean
 	sudo rm -rf /usr/local/bin/pygmentize
