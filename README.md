@@ -9,7 +9,7 @@ see description in [setup.py](setup.py)
 
 ### Python 3.10.4
 
-texlive-latex-extra (for `minted.sty`), python3-setuptools, python3-pygments (Debian packages)
+texlive-latex-extra (for `minted.sty`), python3-setuptools, python3-pygments (Debian packages), optionally pip
 
 ### Python 2.7.13 (tested with Debian 9.4)
 
@@ -17,6 +17,11 @@ python-setuptools, python-pygments (Debian packages)
 
 ## install
 
+With pip:
+
+- On a terminal, run `pip install git+https://github.com/affeldt-aist/ssrmint.git`
+
+With setuptools:
 * set the "right" python in `Makefile` 
 * type `make install`
 * check the style and the lexer have been installed: `pygmentize -L lexers`, `pygmentize -L styles`
