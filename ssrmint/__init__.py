@@ -46,16 +46,16 @@ class SSRLexer(RegexLexer):
         'Variables', 'Parameter', 'Parameters', 'Axiom', 'Hypothesis',
         'Hypotheses', 'Notation', 'Local', 'Tactic', 'Reserved', 'Scope',
         'Open', 'Close', 'Delimit', 'Definition', 'Let', 'Ltac',
-        'Fixpoint', 'CoFixpoint', 'Morphism', 'Relation', 'Implicit',
+        'Fixpoint', 'Function', 'CoFixpoint', 'Morphism', 'Relation', 'Implicit',
         'Arguments', 'Set', 'Unset', 'Contextual', 'Strict', 'Prenex',
-        'Implicits', 'Inductive', 'CoInductive', 'Record', 'Structure',
+        'Implicits', 'Inductive', 'Variant', 'CoInductive', 'Record', 'Structure',
         'Canonical', 'Coercion', 'Theorem', 'Lemma', 'Corollary',
         'Proposition', 'Fact', 'Remark', 'Example', 'Proof', 'Goal', 'Save',
         'Qed', 'Defined', 'Hint', 'Resolve', 'Rewrite', 'View', 'Search',
-        'Show', 'Print', 'Printing', 'All', 'Graph', 'Projections', 'inside',
-        'outside', 'Check', 'Global', 'Instance', 'Existing',
+        'Show', 'Locate', 'Print', 'Printing', 'All', 'Graph', 'Projections', 'inside',
+        'outside', 'About', 'Check', 'Global', 'Instance', 'Existing',
         'Universe', 'Polymorphic', 'Monomorphic', 'Context',
-        'Program', 'Eval', 'Obligation', 'Obligations', 'Solve' #[NB(rei): added]
+        'Program', 'Eval', 'Compute', 'Obligation', 'Obligations', 'Solve', 'From' #[NB(rei): added]
         #[NB(rei): removed 'Bind', 'Class']
     )
     keywords2 = (
@@ -81,8 +81,8 @@ class SSRLexer(RegexLexer):
         'intuition', 'eauto', 'eapply', 'econstructor', 'etransitivity',
         'constructor', 'erewrite', 'red', 'cbv', 'lazy', 'vm_compute',
         'native_compute', 'subst',
-        'fourier', 'nstaz', 'lra', 'program_simpl', 'evar', 'under', 'eexists' #[NB(rei): added]
-        #[NB(rei): removed 'assert', 'symmetry']
+        'fourier', 'nstaz', 'lra', 'program_simpl', 'under', 'eexists' #[NB(rei): added]
+        #[NB(rei): removed 'assert', 'symmetry', 'evar']
     )
     keywords5 = (
         # Terminators

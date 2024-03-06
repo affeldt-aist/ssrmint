@@ -9,7 +9,7 @@ see description in [setup.py](setup.py)
 
 ### Python 3.10.4
 
-texlive-latex-extra (for `minted.sty`), python3-setuptools, python3-pygments (Debian packages), optionally pip
+texlive-latex-extra (for `minted.sty`), python3-setuptools, python3-pygments, pip (Debian packages)
 
 ### Python 2.7.13 (tested with Debian 9.4)
 
