@@ -9,10 +9,10 @@ description = "ad hoc pygments style and lexer for LaTeX pretty-printing of SSRe
 authors = [
     {name = "Reynald Affeldt"}
 ]
-license = {text = "BSD"}
+license = {text = "BSD-3-Clause"}
 requires-python = ">=3.7"
 dependencies = [
-    "pygments",
+    "pygments>=2.0",
 ]
 
 [project.entry-points."pygments.styles"]
