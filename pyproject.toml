@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ssrmint"
+version = "0.1"
+description = "ad hoc pygments style and lexer for LaTeX pretty-printing of SSReflect"
+authors = [
+    {name = "Reynald Affeldt"}
+]
+license = {text = "BSD-3-Clause"}
+requires-python = ">=3.7"
+dependencies = [
+    "pygments>=2.0",
+]
+
+[project.entry-points."pygments.styles"]
+ssr = "ssrmint:SSRStyle"
+
+[project.entry-points."pygments.lexers"]
+CoqLexer = "ssrmint:SSRLexer"

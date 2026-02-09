@@ -17,6 +17,10 @@ python-setuptools, python-pygments (Debian packages)
 
 ## install
 
+With uv (recommended):
+
+- On a terminal, run `uv pip install git+https://github.com/affeldt-aist/ssrmint.git`
+
 With pip:
 
 - On a terminal, run `pip install git+https://github.com/affeldt-aist/ssrmint.git`
